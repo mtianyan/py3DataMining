@@ -28,3 +28,32 @@ for x in range(2):
         flag +=1
     else:
         df.to_csv('a.csv', mode='a', index=None, header=False)
+
+
+from pandas import DataFrame
+import numpy as np
+# 多列数组存储
+header = ['a','b','c']
+a = [1,1,1,1]
+b = [2,2,2,2]
+c = [3,3,3,3]
+
+d = np.vstack([a,b,c])
+# print(d)
+
+df = DataFrame(d).T
+# print (df)
+# df.to_csv('a.csv',header=header)
+
+list_p = []
+
+list_p.append(a)
+list_p.append(b)
+list_p.append(c)
+
+
+
+
+
+
+
